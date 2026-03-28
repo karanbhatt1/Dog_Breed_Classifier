@@ -19,7 +19,7 @@ function App() {
     formData.append("image", file);
 
     try {
-      const res = await fetch("http://localhost:5000/predict", {
+      const res = await fetch("https://dog-breed-classifier-i3sl.onrender.com/predict", {
         method: "POST",
         body: formData,
       });
