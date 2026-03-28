@@ -11,7 +11,9 @@ const azure_end_point = process.env.AZURE_ENDPOINT || "error";
 const app = express();
 const upload = multer();
 
-app.use(cors());
+app.use(cors({
+  origin:"*"
+}));
 
 app.get("/",(req,res)=>{
     res.send("<h1> Back End Running</h1>");
